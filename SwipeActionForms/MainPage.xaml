@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SwipeActionForms"
+    x:Class="SwipeActionForms.MainPage">
+    <StackLayout
+        Spacing="0">
+        <!-- Place new controls here -->
+        <local:SwipeWrapper>
+            <local:SwipeWrapper.DeleteView>
+                <Label
+                    Margin="8,0,0,0"
+                    Text="Delete"
+                    TextColor="White"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Start" />
+            </local:SwipeWrapper.DeleteView>
+            <local:SwipeWrapper.CenterView>
+                <Label
+                    BackgroundColor="Teal"
+                    Text="Line"
+                    HeightRequest="60"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Start" />
+            </local:SwipeWrapper.CenterView>
+        </local:SwipeWrapper>
+        <local:SwipeWrapper>
+            <local:SwipeWrapper.CenterView>
+                <Label
+                    BackgroundColor="Teal"
+                    Text="Line 2"
+                    HeightRequest="60"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Start" />
+            </local:SwipeWrapper.CenterView>
+        </local:SwipeWrapper>
+        <local:SwipeWrapper>
+            <local:SwipeWrapper.DeleteView>
+                <Label
+                    Margin="8,0,0,0"
+                    Text="Delete"
+                    TextColor="White"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Start" />
+            </local:SwipeWrapper.DeleteView>
+            <local:SwipeWrapper.CenterView>
+                <Label
+                    BackgroundColor="Teal"
+                    Text="Line"
+                    HeightRequest="60"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Start" />
+            </local:SwipeWrapper.CenterView>
+        </local:SwipeWrapper>
+        <local:SwipeWrapper>
+            <local:SwipeWrapper.CenterView>
+                <Label
+                    BackgroundColor="Teal"
+                    Text="Line 2"
+                    HeightRequest="60"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Start" />
+            </local:SwipeWrapper.CenterView>
+        </local:SwipeWrapper>
+        <local:SwipeWrapper>
+            <local:SwipeWrapper.DeleteView>
+                <Label
+                    Margin="8,0,0,0"
+                    Text="Delete"
+                    TextColor="White"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Start" />
+            </local:SwipeWrapper.DeleteView>
+            <local:SwipeWrapper.CenterView>
+                <Label
+                    BackgroundColor="Teal"
+                    Text="Line"
+                    HeightRequest="60"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Start" />
+            </local:SwipeWrapper.CenterView>
+        </local:SwipeWrapper>
+        <local:SwipeWrapper>
+            <local:SwipeWrapper.CenterView>
+                <Label
+                    BackgroundColor="Teal"
+                    Text="Line 2"
+                    HeightRequest="60"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Start" />
+            </local:SwipeWrapper.CenterView>
+        </local:SwipeWrapper>
+        <local:SwipeWrapper>
+            <local:SwipeWrapper.DeleteView>
+                <Label
+                    Margin="8,0,0,0"
+                    Text="Delete"
+                    TextColor="White"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Start" />
+            </local:SwipeWrapper.DeleteView>
+            <local:SwipeWrapper.CenterView>
+                <Label
+                    BackgroundColor="Teal"
+                    Text="Line"
+                    HeightRequest="60"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Start" />
+            </local:SwipeWrapper.CenterView>
+        </local:SwipeWrapper>
+        <local:SwipeWrapper>
+            <local:SwipeWrapper.CenterView>
+                <Label
+                    BackgroundColor="Teal"
+                    Text="Line 2"
+                    HeightRequest="60"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Start" />
+            </local:SwipeWrapper.CenterView>
+        </local:SwipeWrapper>
+        <local:SwipeWrapper>
+            <local:SwipeWrapper.DeleteView>
+                <Label
+                    Margin="8,0,0,0"
+                    Text="Delete"
+                    TextColor="White"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Start" />
+            </local:SwipeWrapper.DeleteView>
+            <local:SwipeWrapper.CenterView>
+                <Label
+                    BackgroundColor="Teal"
+                    Text="Line"
+                    HeightRequest="60"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Start" />
+            </local:SwipeWrapper.CenterView>
+        </local:SwipeWrapper>
+        <local:SwipeWrapper>
+            <local:SwipeWrapper.CenterView>
+                <Label
+                    BackgroundColor="Teal"
+                    Text="Line 2"
+                    HeightRequest="60"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Start" />
+            </local:SwipeWrapper.CenterView>
+        </local:SwipeWrapper>
+        <local:SwipeWrapper>
+            <local:SwipeWrapper.DeleteView>
+                <Label
+                    Margin="8,0,0,0"
+                    Text="Delete"
+                    TextColor="White"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Start" />
+            </local:SwipeWrapper.DeleteView>
+            <local:SwipeWrapper.CenterView>
+                <Label
+                    BackgroundColor="Teal"
+                    Text="Line"
+                    HeightRequest="60"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Start" />
+            </local:SwipeWrapper.CenterView>
+        </local:SwipeWrapper>
+        <local:SwipeWrapper>
+            <local:SwipeWrapper.CenterView>
+                <Label
+                    BackgroundColor="Teal"
+                    Text="Line 2"
+                    HeightRequest="60"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Start" />
+            </local:SwipeWrapper.CenterView>
+        </local:SwipeWrapper>
+    </StackLayout>
+</ContentPage>
