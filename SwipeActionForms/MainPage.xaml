@@ -3,12 +3,23 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:SwipeActionForms"
+    BackgroundColor="Black"
     x:Class="SwipeActionForms.MainPage">
- <!--   <ListView>
-        <ListView.Header>-->
+    <ListView
+        x:Name="MainListView"
+        SeparatorVisibility="None">
+        <ListView.Header>
             <StackLayout
                 Spacing="0">
-                <local:SwipeWrapper>
+                <Label
+                    Text="HEADER"
+                    Margin="5"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    FontSize="14" />
+                <!-- ######################################### LEFT #########################################-->
+                <local:SwipeWrapper
+                    ParentListView="{Binding Source={Reference MainListView}}">
                     <local:SwipeWrapper.LeftView>
                         <Label
                             Margin="8,0,8,0"
@@ -19,7 +30,7 @@
                     </local:SwipeWrapper.LeftView>
                     <local:SwipeWrapper.CenterView>
                         <Label
-                            BackgroundColor="Teal"
+                            BackgroundColor="Blue"
                             Text="Left"
                             HeightRequest="60"
                             HorizontalTextAlignment="Center"
@@ -29,7 +40,9 @@
                             VerticalOptions="Start" />
                     </local:SwipeWrapper.CenterView>
                 </local:SwipeWrapper>
-                <local:SwipeWrapper>
+                <!-- ######################################### LEFT AND RIGHT #########################################-->
+                <local:SwipeWrapper
+                    RightActionColor="#A53CFF">
                     <local:SwipeWrapper.LeftView>
                         <Label
                             Margin="0,0,8,0"
@@ -48,17 +61,19 @@
                     </local:SwipeWrapper.RightView>
                     <local:SwipeWrapper.CenterView>
                         <Label
-                            BackgroundColor="Teal"
+                            BackgroundColor="White"
                             Text="Left and Right"
                             HeightRequest="60"
                             HorizontalTextAlignment="Center"
                             VerticalTextAlignment="Center"
-                            TextColor="White"
+                            TextColor="Black"
                             HorizontalOptions="Fill"
                             VerticalOptions="Start" />
                     </local:SwipeWrapper.CenterView>
                 </local:SwipeWrapper>
-                <local:SwipeWrapper>
+                <!-- ######################################### RIGHT #########################################-->
+                <local:SwipeWrapper
+                    RightActionColor="#A53CFF">
                     <local:SwipeWrapper.RightView>
                         <Label
                             Margin="8,0,8,0"
@@ -69,7 +84,7 @@
                     </local:SwipeWrapper.RightView>
                     <local:SwipeWrapper.CenterView>
                         <Label
-                            BackgroundColor="Teal"
+                            BackgroundColor="Red"
                             Text="Right"
                             HeightRequest="60"
                             HorizontalTextAlignment="Center"
@@ -79,7 +94,51 @@
                             VerticalOptions="Start" />
                     </local:SwipeWrapper.CenterView>
                 </local:SwipeWrapper>
+                <Label
+                    Text="LISTVIEW ITEMS"
+                    Margin="5,30,5,5"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    FontSize="14" />
             </StackLayout>
-<!--        </ListView.Header>
-    </ListView>-->
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <!-- ######################################### ITEMS #########################################-->
+                    <local:SwipeWrapper
+                        Margin="0,4">
+                        <local:SwipeWrapper.LeftView>
+                            <Label
+                                Margin="0,0,8,0"
+                                Text="Add"
+                                TextColor="White"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="End" />
+                        </local:SwipeWrapper.LeftView>
+                        <local:SwipeWrapper.RightView>
+                            <Label
+                                Margin="8,0,0,0"
+                                Text="Delete"
+                                TextColor="White"
+                                VerticalTextAlignment="Center"
+                                HorizontalOptions="Start" />
+                        </local:SwipeWrapper.RightView>
+                        <local:SwipeWrapper.CenterView>
+                            <Label
+                                BackgroundColor="#A53CFF"
+                                Text="{Binding }"
+                                HeightRequest="60"
+                                FontAttributes="Bold"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                TextColor="White"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Start" />
+                        </local:SwipeWrapper.CenterView>
+                    </local:SwipeWrapper>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>

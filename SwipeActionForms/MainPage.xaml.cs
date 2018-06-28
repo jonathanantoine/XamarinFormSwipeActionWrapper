@@ -12,6 +12,8 @@ namespace SwipeActionForms
         public MainPage()
         {
             InitializeComponent();
+
+            MainListView.ItemsSource = Enumerable.Range(1, 24).ToList();
         }
     }
 }
