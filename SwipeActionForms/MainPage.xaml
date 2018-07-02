@@ -5,11 +5,11 @@
     xmlns:local="clr-namespace:SwipeActionForms"
     BackgroundColor="Black"
     x:Class="SwipeActionForms.MainPage">
-    <ListView
+   <!-- <ListView
         x:Name="MainListView"
         HasUnevenRows="true"
         SeparatorVisibility="None">
-        <ListView.Header>
+        <ListView.Header>-->
             <StackLayout
                 Spacing="0">
                 <Label
@@ -20,7 +20,7 @@
                     FontSize="14" />
                 <!-- ######################################### LEFT #########################################-->
                 <local:SwipeWrapper
-                    ParentListView="{Binding Source={Reference MainListView}}">
+                >
                     <local:SwipeWrapper.LeftView>
                         <Label
                             Margin="8,0,8,0"
@@ -102,12 +102,12 @@
                     TextColor="White"
                     FontSize="14" />
             </StackLayout>
-        </ListView.Header>
+   <!--     </ListView.Header>
         <ListView.ItemTemplate>
             <DataTemplate>
-                <ViewCell>
+                <ViewCell>-->
                     <!-- ######################################### ITEMS #########################################-->
-                    <local:SwipeWrapper
+               <!--         <local:SwipeWrapper
                         Margin="0,4">
                         <local:SwipeWrapper.LeftView>
                             <Label
@@ -141,5 +141,5 @@
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
-    </ListView>
+    </ListView>-->
 </ContentPage>

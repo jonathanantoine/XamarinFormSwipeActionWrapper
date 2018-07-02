@@ -1,17 +1,22 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace SwipeActionForms
 {
     public class SwipeWrapper : ContentView
     {
+        private static bool _specificiOsConfigurationSet;
+
         private readonly Frame _rightContainer;
         private readonly Frame _leftContainer;
         private readonly Grid _innerGrid;
-        bool _translatedLeftOrRight = false;
+        bool _translatedLeftOrRight;
         private double _previousXTranslation;
         private bool _ParentListView_IsPullToRefreshEnabled;
+        private bool _disablePan;
+
         public bool IsSwipping { get; private set; }
 
         #region NotActionnableColor property
@@ -97,12 +102,12 @@ namespace SwipeActionForms
         public static readonly BindableProperty ParentListViewProperty =
             BindableProperty.Create(
                 nameof(ParentListView),
-                typeof(ListView),
+                typeof(Xamarin.Forms.ListView),
                 typeof(SwipeWrapper));
 
-        public ListView ParentListView
+        public Xamarin.Forms.ListView ParentListView
         {
-            get => (ListView)GetValue(ParentListViewProperty);
+            get => (Xamarin.Forms.ListView)GetValue(ParentListViewProperty);
             set => SetValue(ParentListViewProperty, value);
         }
         #endregion
@@ -218,6 +223,15 @@ namespace SwipeActionForms
             GestureRecognizers.Add(panGesture);
 
             LayoutChanged += OnLayoutChanged;
+
+            // only set once. Set it here to let the control performs
+            // the most of it's configuration itself
+            if (!_specificiOsConfigurationSet)
+            {
+                _specificiOsConfigurationSet = true;
+                Xamarin.Forms.Application.Current.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPanGestureRecognizerShouldRecognizeSimultaneously(true);
+            }
+
         }
 
         private void OnLayoutChanged(object sender, EventArgs e)
@@ -229,7 +243,6 @@ namespace SwipeActionForms
             _leftContainer.Margin = new Thickness(-Width, 0, 0, 0);
         }
 
-        private bool _disablePan;
         private void OnPanUpdated(object sender, PanUpdatedEventArgs e)
         {
             if (_disablePan)

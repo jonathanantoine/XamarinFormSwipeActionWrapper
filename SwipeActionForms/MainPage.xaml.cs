@@ -13,7 +13,7 @@ namespace SwipeActionForms
         {
             InitializeComponent();
 
-            MainListView.ItemsSource = Enumerable.Range(1, 24).ToList();
+           // MainListView.ItemsSource = Enumerable.Range(1, 24).ToList();
         }
     }
 }
