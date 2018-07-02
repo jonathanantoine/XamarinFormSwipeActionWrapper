@@ -297,6 +297,10 @@ namespace SwipeActionForms
             }
         }
 
+        /// <summary>
+        /// Animations the right action : fill fully the item with the right action color and then hide it.
+        /// Pan is disabled during this animation
+        /// </summary>
         private async Task AnimRightActionAsync()
         {
             _disablePan = true;
@@ -307,6 +311,10 @@ namespace SwipeActionForms
             HandleTouch(0, animated: false);
         }
 
+        /// <summary>
+        /// Animations the left action : fill fully the item with the left action color and then hide it.
+        /// Pan is disabled during this animation
+        /// </summary>
         private async Task AnimLeftActionAsync()
         {
             _disablePan = true;
@@ -317,6 +325,11 @@ namespace SwipeActionForms
             HandleTouch(0, animated: false);
         }
 
+        /// <summary>
+        /// Handles the touch : translate left, right or reset the view to 'original' position.
+        /// </summary>
+        /// <param name="xTranslation">X translation detected.</param>
+        /// <param name="animated">If set to <c>true</c> animate the translation to zero.</param>
         private void HandleTouch(double xTranslation, bool animated = true)
         {
             _previousXTranslation = xTranslation;
@@ -355,16 +368,29 @@ namespace SwipeActionForms
             }
         }
 
+        /// <summary>
+        /// Can we trigger the right action ?
+        /// </summary>
+        /// <returns><c>true</c>, if a gesture of a third of the screen width is detected, <c>false</c> otherwise.</returns>
+        /// <param name="totalX">the detected offset.</param>
         private bool CanTriggerRightAction(double totalX)
         {
             return -1 * totalX > (Width / 3);
         }
 
+        /// <summary>
+        /// Cans we trigger the left action ?
+        /// </summary>
+        /// <returns><c>true</c>, if a gesture of a third of the screen width is detected, <c>false</c> otherwise.</returns>
+        /// <param name="totalX">the detected offset.</param>
         private bool CanTriggerLeftAction(double totalX)
         {
             return totalX > (Width / 3);
         }
 
+        /// <summary>
+        /// Generates the view based on available left/right view.
+        /// </summary>
         private void GenerateView()
         {
             if (CenterView == null)
