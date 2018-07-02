@@ -231,7 +231,18 @@ namespace SwipeActionForms
                 _specificiOsConfigurationSet = true;
                 Xamarin.Forms.Application.Current.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPanGestureRecognizerShouldRecognizeSimultaneously(true);
             }
+        }
 
+        protected override void OnBindingContextChanged()
+        {
+            base.OnBindingContextChanged();
+
+            // set things back to original values
+            if (ParentListView != null)
+            {
+                ParentListView.IsPullToRefreshEnabled = _ParentListView_IsPullToRefreshEnabled;
+            }
+            _disablePan = false;
         }
 
         private void OnLayoutChanged(object sender, EventArgs e)
