@@ -16,6 +16,7 @@ You need to register a specific renderer on Android to let it works nicely on An
 [assembly: ExportRenderer(typeof(SwipeWrapper), typeof(SwipeWrapperRenderer))]
 ```
 
+In the demo project, this is done in the *[AssemblyInfo.cs](https://github.com/jonathanantoine/XamarinFormSwipeActionWrapper/blob/bfdf1eb047f052d813bfc6cf31505ecc216a8f2c/SwipeActionForms.Android/Properties/AssemblyInfo.cs#L38)* file of the Android project.
 
 ## iOS configuration
 Nothing special has to be done but  be aware that this specific ios configuration will be enabled :
